@@ -32,10 +32,10 @@
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.lblPaymentMethod = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPayment = new System.Windows.Forms.Label();
             this.btnSelectPayment = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblPayment = new System.Windows.Forms.Label();
             this.GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,12 +67,20 @@
             // GroupBox1
             // 
             this.GroupBox1.Controls.Add(this.lblPayment);
-            this.GroupBox1.Location = new System.Drawing.Point(37, 118);
+            this.GroupBox1.Location = new System.Drawing.Point(37, 109);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(248, 82);
+            this.GroupBox1.Size = new System.Drawing.Size(248, 109);
             this.GroupBox1.TabIndex = 5;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Change to credit card.";
+            // 
+            // lblPayment
+            // 
+            this.lblPayment.AutoEllipsis = true;
+            this.lblPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPayment.Location = new System.Drawing.Point(0, 0);
+            this.lblPayment.Name = "lblPayment";
+            this.lblPayment.Size = new System.Drawing.Size(248, 109);
+            this.lblPayment.TabIndex = 0;
             // 
             // btnSelectPayment
             // 
@@ -82,34 +90,27 @@
             this.btnSelectPayment.TabIndex = 6;
             this.btnSelectPayment.Text = "Select Payment";
             this.btnSelectPayment.UseVisualStyleBackColor = true;
+            this.btnSelectPayment.Click += new System.EventHandler(this.btnSelectPayment_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(203, 224);
+            this.btnSave.Location = new System.Drawing.Point(203, 237);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 23);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(357, 223);
+            this.btnExit.Location = new System.Drawing.Point(357, 237);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(129, 23);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // lblPayment
-            // 
-            this.lblPayment.AutoEllipsis = true;
-            this.lblPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPayment.Location = new System.Drawing.Point(0, 18);
-            this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(248, 61);
-            this.lblPayment.TabIndex = 0;
-            this.lblPayment.Text = "\"\"";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmCustomer
             // 
@@ -126,6 +127,7 @@
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.frmCustomer_Load);
             this.GroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
